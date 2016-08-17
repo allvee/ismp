@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title><?php echo $pageTitle; ?></title>
+        <!--<script src="script/jquery.tools.1.2.6.full.min.js"></script>
+        <script type="text/javascript" src="/script/jquery.watermarkinput.js"></script>-->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all,handheld" />
+        <link href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/admin.css" rel="stylesheet" type="text/css" media="all,handheld" />
+        <!--<link rel="stylesheet" media="screen" type="text/css" href="css/datepicker.css" />-->
+        <!--<link rel="stylesheet" href="development-bundle/themes/cupertino/jquery.ui.all.css">-->
+        <link type="text/css" rel="stylesheet" href="css/tsc_pagination.css" />
+        <link type="text/css" rel="stylesheet" href="css/table.css" />
+        <link type="text/css" rel="stylesheet" href="css/jquery-ui-1.10.3.custom.css">
+        <script src="js/jquery-1.9.1.min.js"></script>
+ 		
+        <!--Datepicker-->
+        <link rel="stylesheet" type="text/css" media="all" href="css/jsDatePick_ltr.min.css" />
+ 		<script type="text/javascript" src="js/jsDatePick.jquery.min.1.3.js"></script>
+        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+            <!--<script src="development-bundle/ui/jquery.ui.core.js"></script>
+
+            <script src="development-bundle/ui/jquery.ui.datepicker.js"></script>
+            <link rel="stylesheet" href="development-bundle/demos/demos.css">
+                <script type="text/javascript" src="js/datepicker.js"></script>
+                <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>-->
+                <style type="text/css">
+                    #main_back
+                    {
+                        background-image: url('images/home_bg.png');
+                        background-repeat: no-repeat;
+                        width: 1000px;
+                        height: 675px;
+                        /*margin: 0 auto;*/
+						margin-left:100px;
+                        padding: 0px;
+                    }
+
+                    #navigation_menu_home
+                    {
+                        margin-left: 295px;
+                        
+                    }
+                    #navigation_menu_page
+                    {
+                        margin-left: 295px;
+                        margin-top: 281px;
+                    }
+                    #pages
+                    {
+                        background-image: url('images/page_bg.png');
+                        background-repeat: no-repeat;
+                        width: 1000px;
+                        height: 670px;
+                       /* margin: 0 auto;*/
+					   	margin-left:100px;
+                        position: relative;
+                    }
+                    
+                    #page_div{
+                        position: absolute;
+                        right: 0px;
+                        top: 92px;
+                        /*width: 516px;*/
+						width: 480px;
+                    }
+                    
+                    #navigation_menu
+                    {
+                       padding: 56px 0 0 306px;
+                       position: relative;
+    
+                    }
+                    
+                    #navigation_menu ul li{
+                       font-size: 22px;
+                       font-weight: bold;
+                       padding-bottom: 5px;
+                    }
+                    
+                    #navigation_menu ul li a{
+                        color: #BAB5AE;
+                    }
+                    
+                    #navigation_menu ul li a:hover
+                    {
+                        color: #000000;
+                    }
+                    
+                    #logout_link{
+                        background-image: url('images/logout-button.png');
+                        background-repeat: no-repeat;
+                        margin-left: 30px;
+                        margin-top: 30px;
+                        color: #585858;
+                    }
+
+                </style>   
+                </head>
+                <body> <!-- style="background-color: #131313;"-->
+                   <!-- <a href="index.php?FORM=forms/frm/frmUserPassword.php" style="position: absolute; right: 230px; z-index: 999;"><img src="img/key.png" width="25px" height="25px" /></a>
+                    <a href="index.php" style="position: absolute; right: 200px; z-index: 999;"><img src="img/home_logo_white.png" width="25px" height="25px" /></a>-->
+                    <?php
+                   		if ($FORM == "defaultbody.php") {
+                    ?>
+                        
+                        
+                        <div id="main_back">
+                            <div style="position: relative; right:30px; top:230px; z-index: 999;">
+                            	<a href="loginsession.php" style="float:right;padding-top:25px;"><img src="images/logout-button.png" width="55px" height="15px" /></a>
+                                <a href="index.php?FORM=forms/frm/frmUserPassword.php" style="float:right;padding-right: 25px; padding-top: 7px;"><img src="images/key_hide.png" width="35px" height="35px" /></a>
+                                <a href="index.php?FORM=forms/frm/frmManager.php" style="float:right;padding-right: 25px; padding-top: 7px;"><img src="images/tools.png" width="35px" height="35px" /></a>
+                                <a href="index.php?FORM=forms/frm/frmProxy.php" style="float:right;padding-right: 25px; padding-top: 7px;"><img src="images/proxy.png" width="35px" height="55px" /></a>
+                                <a href="index.php" style="float:right;padding-right: 36px;"><img src="images/home_logo.png" width="40px" height="40px" /></a>
+                            </div>
+                            <!--<a href="loginsession.php" id="logout_link">.................</a> -->
+							<!--<img src="images/unified-gateway-logo.png" width="442px" height="125px" style="padding-left:300px;" />-->
+                            <div id="navigation_menu">
+                                <?php include $FORM; ?>
+                            </div>
+                            </div>
+                     <?php
+                        } else {
+                     ?>
+                        <div id="pages">
+                        	
+                            <div style="position: relative; left:325px; top:50px; z-index: 999;">
+                                <span style="float:left; color:#87C733;z-index:999; font-weight:bold; font-size:24px; padding-top:5px; width:380px;"><?php echo $page_title_value; ?></span>
+                                <a href="index.php" style="float:left;padding-left:10px;"><img src="images/home_logo_hide.png" width="40px" height="40px" /></a>
+                                <a href="index.php?FORM=forms/frm/frmProxy.php" style="float:left;padding-left:10px;"><img src="images/proxy.png" width="35px" height="55px" /></a>
+                                
+                                <a href="index.php?FORM=forms/frm/frmManager.php" style="float:left;padding-left:15px;padding-top:5px;">
+                                    <?php if(isset($_REQUEST['FORM']) && $_REQUEST['FORM'] == "forms/frm/frmManager.php"){ ?>
+                                            <img src="images/tools.png" width="35px" height="35px" />
+                                    <?php } else { 	?>
+                                            <img src="images/tools.png" width="35px" height="35px" />
+                                    <?php } ?>
+                                </a>
+                                <a href="index.php?FORM=forms/frm/frmUserPassword.php" style="float:left;padding-left:15px;padding-top:5px;">
+                                    <?php if(isset($_REQUEST['FORM']) && $_REQUEST['FORM'] == "forms/frm/frmUserPassword.php"){ ?>
+                                            <img src="images/key.png" width="35px" height="35px" />
+                                    <?php } else { 	?>
+                                            <img src="images/key_hide.png" width="35px" height="35px" />
+                                    <?php } ?>
+                                </a>
+                                
+                                <a href="loginsession.php" style="float:left;padding-left:15px;padding-top:25px;"><img src="images/logout-button.png" width="55px" height="15px" /></a>
+                            </div>
+                        	
+                            <div id="menu_div" style="position: absolute; top: 0px; left: 0px; width:320px; height: 320px; ">
+                                <?php include $MENU; ?>    
+                            </div>
+                            <div id="page_div">
+                                <?php include $FORM; ?>
+                            </div>
+                            <!--<a href="http://www.ssd-tech.com/" style="position: absolute; bottom: 4px; left: 34px;"><img src="img/logo.jpg" width="75px" height="25px" style="float:left;" /><img src="images/unified-gateway-logo.png" width="75px" height="25px" style="float:left;padding-left:2px;" /></a>-->
+                            <!--<a href="loginsession.php" id="logout_link" style="position: absolute; bottom: 0px; right: 0px;">.................</a>-->
+                        </div>
+                        
+                            <?php
+                        }
+							  include "header.php";
+                   
+                        ?>
+
+                    
+                </body>
+                </html>
+

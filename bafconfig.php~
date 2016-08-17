@@ -1,0 +1,81 @@
+<?php
+$CONNECT_DB="YES";  // DB Connection Flag
+$CHECK_LOGIN="YES"; // Log in enable
+$LOGIN_URL="login.php";
+$TBL_USER='tbl_user'; //SQL Server [User]
+$TBL_ROLE = 'roleinfo'; // role table
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
+/**
+ * HOSTING
+ */
+$host_drive = "http://".$_SERVER['HTTP_HOST']."/ismp/";
+$CURRENT_FILE_HOSTING_PATH = "/var/www/html/ismp/";
+$pageTitle = "ISMP : Configuration & Service Management Portal";
+$page_title_value = "";
+$hostPath = "http://". $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
+/**
+ * Upgrade Source & Destination File Directory
+ */
+$UPGRADE_VERSION_SEARCH_URL = "http://192.168.241.146/upgrade/check_upgraded_version.php";
+$UPGRADE_SOURCE_FILE_PATH = "http://192.168.241.146/ugw/";
+$UPGRADE_DESTINATION_FILE_PATH = "/home/download_files/ismp.zip";
+
+/**
+ * UGW RollBack Default VERSION BACKUP Directory
+ */
+$LATEST_FILES_BACKUP_PATH = "/home/ISMP_ROLLBACK_VERSION/";
+$DEFAULT_SOURCE_FILES = "/home/ISMP_BACKUP/";
+$SHELL_FILE_URL = $CURRENT_FILE_HOSTING_PATH."ssh/file_write.sh";
+
+/**
+ * Log Generator
+ */
+$LOG_TYPE = "FILE";  // FOR file writing >> "FILE", FOR Database >> "DB"
+$LOG_HOLDER = "/home/LOG/";  // FOR file writing >> FILE_DIR_PATH, FOR Database >> Table_Name (or, DB_NAME.TABLE_NAME)
+
+/**
+ * Pagination & delete options Initialize
+ */
+$page=1;
+$per_page = 5;
+$DELETE_OPTION = 'true';
+
+/**
+ * Template And Menu
+ */
+$ACTIVE_TEMPLATE="templates/default.template";
+$MENU="menu.php"; //Put "NA" if no menu is available
+
+/**
+ * File Directory Path
+ */
+// // SGW \\ \\ 
+$path_of_sgw_configuration = "/ismp/test/SGW/config.ini";
+$path_of_sgw_channel_map = "/ismp/test/SGW/channelmap.ini";
+
+// // Call Handler \\ \\ 
+$path_of_ch_configuration = "/var/www/html/ismp/test_file_dir/CH/vsdp.ini";
+$path_of_ch_channel_map = "/var/www/html/ismp/test_file_dir/CH/chMap.ini";
+
+// // CGW \\ \\ 
+$path_of_cgw_configuration = "/var/www/html/ismp/test_file_dir/CGW/config.ini";
+$path_of_cgw_channel_map = "/var/www/html/ismp/test_file_dir/CGW/channelmap.ini";
+
+// // SMSGW \\ \\ 
+$path_of_smsgw_configuration = "/var/www/html/ismp/test_file_dir/SMSGW/conf.ini";
+$path_of_smsgw_channel_map = "/var/www/html/ismp/test_file_dir/SMSGW/channelmap.ini";
+$single_sms_url = "http://localhost/SendSMS/SendSingleSMS.php?";
+$bulk_sms_url = "http://localhost/SendSMS/SendMultipleSMS.php?";
+$cde_url = "http://localhost/CDE/cde.php?";
+
+// // OBD UPLOAD PROMPT \\ \\ 
+$upload_directory_for_obd_prompt_upload = "/var/www/html/ismp/obd_upload_prompt/";
+
+// // Maintainance \\ \\ 
+$p_of_sgw_maintainance = "/ismp/test/sgw/";
+$p_of_ch_maintainance = "/ismp/test/vsdp/callhandler/";
+$p_of_cgw_maintainance = "/ismp/test/cgw/cgwapp/";
+$p_of_smsgw_maintainance = "/ismp/test/smsgw/smppapp/";
+?>

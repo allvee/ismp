@@ -1,0 +1,10 @@
+Show process command: 
+ps -ef|grep signalingGW
+
+Kill Process:
+
+Killall signalingGW
+
+
+
+// run shell script for start

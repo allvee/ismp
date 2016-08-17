@@ -1,0 +1,353 @@
+/* 
+	Template Name: Clean
+	Template URI: www.slidetabs.com
+	Description: Clean style tabs
+	Version: 1.0.5
+	Author: SlideTabs
+	Author URI:
+*/
+
+/* NOTE: Prefix the template styles with <TEMPLATE FOLDER NAME>-horizontal/vertical */
+
+
+/* 
+ * Horizontal Tabs
+ *
+------------------------------------------------------------------------------------- */
+div.clean-horizontal { /* The main container */	
+	position:relative;
+	clear:both;
+	width:100%; /* Set the full width */
+}
+
+/* Directional Buttons (horizontal)
+------------------------------------------------------------------------------------- */
+div.clean-horizontal > div.st_tabs a.st_prev, 
+div.clean-horizontal > div.st_tabs a.st_next { /* Directional buttons (previous/next) */
+	display:none;
+	position:absolute;
+	top:0px;
+	z-index:110;
+	height:43px;
+	width:43px;
+	text-indent:-999em;
+	border:1px solid #ccc;
+	outline:none;
+	background:#fff url("images/arrows_h.gif") no-repeat;	
+}
+div.clean-horizontal > div.st_tabs a.st_prev { /* Previous button */
+	left:0px;
+	background-position:center 15px;
+}
+div.clean-horizontal > div.st_tabs a.st_prev:hover { /* Previous button hover */	
+	background-position:center -45px;
+	background-color:#f8f8f8;
+}
+div.clean-horizontal > div.st_tabs a.st_next { /* Next button */
+	right:0px;
+	background-position:center -15px;
+}
+div.clean-horizontal > div.st_tabs a.st_next:hover { /* Next button hover */	
+	background-position:center -75px;
+	background-color:#f8f8f8;
+}
+div.clean-horizontal > div.st_tabs a.st_prev.st_btn_disabled, 
+div.clean-horizontal > div.st_tabs a.st_next.st_btn_disabled { /* Previous and next buttons disabled state */
+	cursor:default;
+	background-color:#f8f8f8;
+}
+div.clean-horizontal > div.st_tabs a.st_prev.st_btn_disabled { /* Previous button disabled state */
+	background-position:center -105px;
+}
+div.clean-horizontal > div.st_tabs a.st_next.st_btn_disabled { /* Next button disabled state */
+	background-position:center -135px;
+}
+
+/* Tabs (horizontal)
+------------------------------------------------------------------------------------- */
+div.clean-horizontal > div.st_tabs { /* Tabs main container */		
+	position:relative;
+	z-index:100;		
+	width:100% !important;	
+	height:45px;
+	margin-bottom:-1px;
+	overflow:hidden;
+}
+div.clean-horizontal.st_sliding_active > div.st_tabs { /* Tabs main container - sliding active (the '.st_sliding_active' class is added to the tabs main container when the tabs are 'slidable') */
+	height:45px;
+}
+div.clean-horizontal > div.st_tabs div.st_tabs_wrap { /* Tabs slide-container */
+	position:relative !important; /* Don't remove: The tabs sliding position will be calculated from the tabs <ul> first parent element with position:relative */
+	width:100%;
+}
+div.clean-horizontal.st_sliding_active > div.st_tabs div.st_tabs_wrap { /* The '.st_sliding_active' class is added to the main container when tab sliding is activated */
+	width:auto !important;
+	margin:0px 44px; /* Adds side margins to make space for the arrow buttons */
+}
+div.clean-horizontal > div.st_tabs ul { /* Tabs unordered list */
+	width:10000px; /* Set to an arbitrary high value */
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+div.clean-horizontal > div.st_tabs ul li { /* Tab list elements */
+	display:block;
+	float:left;
+	margin:0px;
+}
+div.clean-horizontal > div.st_tabs ul li a { /* Tab links */
+	display:block;
+	height:43px;
+	margin:0px;
+	padding:0 28px;
+	font:bold 12px/43px Arial, Helvetica, sans-serif;	
+	color:#6a6a6a;
+	text-decoration:none;
+	outline:none;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+	background:#f8f8f8;
+	background:-moz-linear-gradient(center top , #fbfbfb, #f8f8f8);
+}
+div.clean-horizontal > div.st_tabs ul li a:hover { /* Tabs hover state */
+	color:#333;
+	background:#fbfbfb;
+}
+div.clean-horizontal > div.st_tabs ul li a.st_tab_first { /* First tab element */
+	border-left:1px solid #ccc;
+}
+div.clean-horizontal.st_sliding_active > div.st_tabs ul li a.st_tab_first { /* First tab element (with tab sliding activated) */
+	border-left:0 none;
+}
+div.clean-horizontal.st_sliding_active > div.st_tabs ul li a.st_tab_last { /* Last tab element (with tab sliding activated) */
+	border-right:0 none;
+}
+div.clean-horizontal > div.st_tabs ul li a.st_tab_active { /* Tab active/highlighted state */
+	padding-bottom:2px;
+	background:#fff;
+	color:#1ca5ec;
+}
+
+/* Content (horizontal)
+------------------------------------------------------------------------------------- */
+div.clean-horizontal > div.st_views { /* Main content container */
+	position:relative;
+	z-index:5;
+	height:400px;
+	padding:0px !important; /* No padding on this container */
+	line-height:19px;
+	border:1px solid #ccc;
+	background-color:#fff;
+	overflow:hidden;
+}
+div.clean-horizontal > div.st_views div.st_view { /* Content containers - NOTE: background images will be set on these containers */
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background-image:none;
+	-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; /* Set 'border-box' box-sizing when using 100% width/height combined with margin or padding */
+	/* Background-image attributes */
+	background-repeat:no-repeat !important;
+	background-position:0px 0px !important;
+	background-color:transparent !important;
+}
+div.clean-horizontal > div.st_views div.st_view_inner { /* Inner content containers */
+	padding:30px; /* Padding for the content */
+}
+div.clean-horizontal > div.st_views div.st_view_first { /* First content container */
+	display:block; /* Show the first content container */
+}
+
+/* Bottom-aligned Tabs (horizontal)
+------------------------------------------------------------------------------------- */
+div.clean-horizontal.align_bottom { /* The main container */
+	margin-bottom:45px; /* Set to the total height of div.st_tabs */
+}
+div.clean-horizontal.align_bottom > div.st_tabs { /* Tabs main container */
+	position:absolute; /* Absolute position the tabs container at the bottom of the main container */
+	bottom:-44px;
+	left:0px;
+	margin-bottom:0px;
+}
+div.clean-horizontal.align_bottom.st_sliding_active > div.st_tabs {
+	border-top:0 none;
+}
+div.clean-horizontal.align_bottom > div.st_tabs ul li a.st_tab_active { /* Tab active/highlighted state */
+	padding-bottom:0px;
+	border-top-color:#fff;
+}
+div.clean-horizontal.align_bottom > div.st_tabs ul li a { /* Tab links */
+	border-bottom:1px solid #ccc;
+}
+
+
+/* 
+ * Vertical Tabs
+ *
+------------------------------------------------------------------------------------- */
+div.clean-vertical { /* The main container */
+	position:relative;
+	clear:both;
+	width:100%; /* Set the full width */
+}
+
+/* Control Buttons (vertical)
+------------------------------------------------------------------------------------- */
+div.clean-vertical > div.st_tabs a.st_prev, 
+div.clean-vertical > div.st_tabs a.st_next { /* Directional buttons (previous/next) */	
+	display:none;
+	float:left;
+	position:relative;
+	z-index:100;	
+	height:34px;
+	width:93px;
+	text-indent:-999em;
+	border:1px solid #ccc;
+	border-top:0 none;
+	outline:none;	
+	background:#fff url("images/arrows_v.gif") no-repeat;	
+}
+div.clean-vertical > div.st_tabs a.st_prev { /* Previous button */
+	border-right:0 none;
+	background-position:center 13px;
+}
+div.clean-vertical > div.st_tabs a.st_prev:hover { /* Previous button hover */
+	background-position:center -51px;
+	background-color:#f5f5f5;
+}
+div.clean-vertical > div.st_tabs a.st_next { /* Next button */
+	background-position:center -19px;
+}
+div.clean-vertical > div.st_tabs a.st_next:hover { /* Next button hover */
+	background-position:center -83px;
+	background-color:#f5f5f5;
+}
+div.clean-vertical > div.st_tabs a.st_prev.st_btn_disabled,
+div.clean-vertical > div.st_tabs a.st_next.st_btn_disabled { /* Previous and next buttons disabled state */
+	cursor:default;
+	background-color:#f7f7f7;
+}
+div.clean-vertical > div.st_tabs a.st_prev.st_btn_disabled { /* Previous button disabled state */
+	background-position:center -115px;
+}
+div.clean-vertical > div.st_tabs a.st_next.st_btn_disabled { /* Next button disabled state */
+	background-position:center -147px;
+}
+
+/* Tabs (vertical)
+------------------------------------------------------------------------------------- */
+div.clean-vertical > div.st_tabs { /* Tabs main container */  	
+	position:relative;
+	z-index:100;
+	float:left;
+	width:189px; /* +1px for the negative right margin */
+	height:401px;
+	margin-right:-1px;
+	border-top:1px solid #ccc;
+	overflow:hidden;
+}
+div.clean-vertical > div.st_tabs div.st_tabs_wrap { /* Tabs slide-container */
+	position:relative !important; /* Don't remove: The tabs sliding position will be calculated from the tabs <ul> first parent element with position:relative */
+	float:left;
+	clear:both;
+}
+div.clean-vertical > div.st_tabs ul { /* Tabs unordered list */
+	float:left;
+	width:188px;	
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+div.clean-vertical > div.st_tabs ul li { /* Tab list elements */
+	position:relative;
+	float:left;
+	clear:both;
+	margin:0px;
+}
+div.clean-vertical > div.st_tabs ul li a { /* Tab links */
+	display:block;
+	width:167px;
+	height:32px;
+	margin:0px;
+	padding:14px 0 14px 20px;
+	font:bold 12px/18px Arial, Helvetica, sans-serif;
+	color:#5c5c5c;
+	text-decoration:none;
+	outline:none;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	border-left:1px solid #ccc;
+	background-color:#f8f8f8;
+	/* Background gradient */
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#f4f4f4)); /* Safari 4+, Chrome 1-9 */
+	background-image:-webkit-linear-gradient(top, #f9f9f9, #f4f4f4); /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+	background-image:-moz-linear-gradient(top, #f9f9f9, #f4f4f4); /* Firefox 3.6+ */
+	background-image:-ms-linear-gradient(top, #f9f9f9, #f4f4f4); /* IE 10+ */
+	background-image:-o-linear-gradient(top, #f9f9f9, #f4f4f4); /* Opera 11.10+ */
+}
+div.clean-vertical > div.st_tabs ul li a:hover { /* Tabs hover state */
+	color:#333;
+	background:#fbfbfb;
+}
+div.clean-vertical > div.st_tabs ul li a.st_tab_active { /* Tab active/highlighted state */
+	position:relative;
+	z-index:10;
+	color:#1ca5ec;
+	padding-right:1px;
+	background:#fff;
+}
+div.clean-vertical > div.st_tabs ul li a span {
+	display:block;
+	clear:both;
+	font-size:11px;
+	font-weight:normal;
+	color:#838383;
+	padding-top:3px;	
+}
+
+/* Content (vertical)
+------------------------------------------------------------------------------------- */
+div.clean-vertical > div.st_views { /* Main content container */
+	position:relative;
+	z-index:5;
+	height:400px;
+	line-height:18px;
+	border:1px solid #ccc;
+	background-color:#fff;
+	overflow:hidden;
+}
+div.clean-vertical > div.st_views div.st_view { /* Content containers - NOTE: background images will be set on these containers */
+	width:100%;	
+	height:100%;
+	overflow:hidden;
+	background-image:none;
+	/* Background-image attributes */
+	background-repeat:no-repeat !important;
+	background-position:0px 0px !important;
+	background-color:transparent !important;
+}
+div.clean-vertical > div.st_views div.st_view_inner { /* Inner content containers - NOTE: the 'Auto Height' option uses the full height of this container to set the height */
+	overflow:hidden !important; /* Makes the element wrap around the content */
+	padding:30px; /* Padding for the content */
+}
+div.clean-vertical > div.st_views div.st_view_first { /* First content container */
+	display:block; /* Show the first content container */
+}
+
+/* Right-aligned Tabs (vertical)
+------------------------------------------------------------------------------------- */
+div.clean-vertical.align_right > div.st_tabs a.st_prev { /* Previous button */
+	margin-left:0px;
+}
+div.clean-vertical.align_right > div.st_tabs a.st_next { /* Previous button */
+	margin-right:-1px;
+}
+div.clean-vertical.align_right > div.st_tabs { /* Tabs main container */  	
+	float:right;
+	margin-left:-1px;
+	margin-right:0px;
+}
+div.clean-vertical.align_right > div.st_tabs ul li a.st_tab_active { /* Tab active/highlighted state */
+	padding-right:0px;
+	border-left-color:#ffffff;
+}

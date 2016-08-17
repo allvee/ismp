@@ -1,0 +1,41 @@
+2014-07-02 14:41:48|sClient|sctpProcess|Staring Signaling GW as Client
+2014-07-02 14:41:48|sClient|initController|NDE List Initialized..
+2014-07-02 14:41:48|sClient|initController|Receive Thread Started...!
+2014-07-02 14:41:48|sClient|sgwCtrl|SCTP Controller Function Started! rc 1 (RC 1)
+2014-07-02 14:41:48|sClient|InitSocket|Socket 3
+2014-07-02 14:41:48|sClient|InitSocket|Socket Initialized
+2014-07-02 14:41:48|sClient|sgwCtrl|SCTP Socket[3] Initialized
+2014-07-02 14:41:48|sClient|ConnectPeer|Connected to 10.10.2.2
+2014-07-02 14:41:48|sClient|sgwCtrl|Connected to 10.10.2.2:6413
+2014-07-02 14:41:48|sClient|sgwCtrl|Waiting for event...!
+2014-07-02 14:41:48|sClient|DeQueNDE|Entering DeQue CtrlPos 0
+2014-07-02 14:41:48|sClient|DeQueNDE|Leaving DeQue CtrlPos 1
+2014-07-02 14:41:48|sClient|sgwCtrl|Event received 1001...!
+2014-07-02 14:41:48|sClient|parseM3UAMessage|Parsing [mcASPSM/TM 0x3][mt 0x4]
+2014-07-02 14:41:48|sClient|sgwCtrl|ASP UP Acknowledgment received 1001...!
+2014-07-02 14:41:48|sClient|sgwCtrl|ASP Active Message Sent...!
+2014-07-02 14:41:48|sClient|sgwCtrl|Waiting for event...!
+2014-07-02 14:41:48|sClient|DeQueNDE|Entering DeQue CtrlPos 1
+2014-07-02 14:41:48|sClient|DeQueNDE|Leaving DeQue CtrlPos 2
+2014-07-02 14:41:48|sClient|sgwCtrl|Event received 1005...!
+2014-07-02 14:41:48|sClient|parseM3UAMessage|Parsing [mcMGMT 0x0][mtNTFY 0x1]
+2014-07-02 14:41:48|sClient|parseM3UAMessage|Parsing [mcMGMT 0x0][mtNTFY 0x1] Param[pSTATUS 0xD Len 0x8] Type 0x1 Status Info 0x2
+2014-07-02 14:41:48|sClient|parseM3UAMessage|Parsing [mcMGMT 0x0][mtNTFY 0x1] Param[pASPID 0x11 Len 0x8] Value 0x1
+2014-07-02 14:41:48|sClient|sgwCtrl|Unhandled Event received 1005...!
+2014-07-02 14:41:48|sClient|sgwCtrl|Waiting for event...!
+2014-07-02 14:41:48|sClient|DeQueNDE|Entering DeQue CtrlPos 2
+2014-07-02 14:41:48|sClient|DeQueNDE|Leaving DeQue CtrlPos 3
+2014-07-02 14:41:48|sClient|sgwCtrl|Event received 1003...!
+2014-07-02 14:41:48|sClient|parseM3UAMessage|Parsing [mcASPSM/TM 0x4][mt 0x3]
+2014-07-02 14:41:48|sClient|parseM3UAMessage|Parsing [mcASPSM/TM 0x4][mt 0x3] Param[pTMT 0xB Len 0x8] Value 0x2
+2014-07-02 14:41:48|sClient|sgwCtrl|ASP Active Acknowledgment received 1003...!
+2014-07-02 14:41:48|sClient|sgwCtrl|All CIC IDLE!
+2014-07-02 14:41:48|sClient|sgwCtrl|Waiting for event...!
+2014-07-02 14:41:48|sClient|DeQueNDE|Entering DeQue CtrlPos 3
+2014-07-02 14:41:48|sClient|DeQueNDE|Leaving DeQue CtrlPos 4
+2014-07-02 14:41:48|sClient|sgwCtrl|Event received 1005...!
+2014-07-02 14:41:48|sClient|parseM3UAMessage|Parsing [mcMGMT 0x0][mtNTFY 0x1]
+2014-07-02 14:41:48|sClient|parseM3UAMessage|Parsing [mcMGMT 0x0][mtNTFY 0x1] Param[pSTATUS 0xD Len 0x8] Type 0x1 Status Info 0x3
+2014-07-02 14:41:48|sClient|parseM3UAMessage|Parsing [mcMGMT 0x0][mtNTFY 0x1] Param[pASPID 0x11 Len 0x8] Value 0x1
+2014-07-02 14:41:48|sClient|sgwCtrl|Unhandled Event received 1005...!
+2014-07-02 14:41:48|sClient|sgwCtrl|Waiting for event...!

@@ -1,0 +1,102 @@
+/* Base Styles */
+#cssmenu, #cssmenu ul, #cssmenu li, #cssmenu a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	font-weight: normal;
+	text-decoration: none;
+	position: relative;
+}
+#cssmenu {
+	width: 100%;
+}
+#cssmenu a {
+}
+#cssmenu > ul > li {
+	font-size: 17px;
+	margin-bottom: 1px;
+}
+#cssmenu > ul > li:hover {
+}
+#cssmenu > ul > li > a {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	/*background-color: rgba(0, 0, 0, 0.3);*/
+	color: #FFF;
+	border-bottom: 1px solid #484356;
+}
+#cssmenu > ul > li > a i {
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	font-style: normal;
+	margin-top: 3px;
+}
+#cssmenu > ul > li > a:hover {
+	background-color: rgba(51,51,51,1);
+}
+#cssmenu > ul > li.active {
+}
+#cssmenu li.has-sub > a {
+	background-image: url(../images/icon_plus.png);
+	background-repeat: no-repeat;
+	background-position: 95% center;
+}
+#cssmenu li.has-sub.active > a {
+	background-image: url(../images/icon_minus.png);
+	background-repeat: no-repeat;
+	background-position: 95% center;
+}
+#cssmenu > ul > li > a > img {
+	float: left;
+	margin: 0px 9px 0px 0px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+/* Sub menu */
+#cssmenu ul ul {
+	display: none;
+}
+#cssmenu ul ul li {
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+#cssmenu ul ul a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 70px;
+	display: block;
+	color: #fff;
+	font-size: 17px;
+	font-weight: normal;
+	margin-bottom: 1px;
+}
+#cssmenu ul ul a:before {
+	content: '»';
+	position: absolute;
+	font-size: 22px;
+	left: 47px;
+	top: 5px;
+}
+#cssmenu ul ul a:hover {
+	color: #e94f31;
+}
+#cssmenu ul ul ul li {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#cssmenu ul ul ul ul li {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+#cssmenu ul ul ul li a  {
+	margin-left:20px;
+}
+#cssmenu ul ul ul ul li a  {
+	margin-left:40px;
+}
+#cssmenu ul ul ul ul ul li a  {
+	margin-left:60px;
+}
